@@ -4,6 +4,7 @@
   "description": "Warehouse Managment Server NodejS",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "nodemon index.js"
   },
   "repository": {
