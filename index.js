@@ -12,4 +12,6 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.send(`App is working. Last Reporting Time: ${Date()}`);
 });
-app.listen(port);
+app.listen(port,()=>{
+    console.log(`App Listening to port: ${port}`);
+});
