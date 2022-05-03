@@ -1,0 +1,19 @@
+{
+  "name": "warehouse-server",
+  "version": "0.0.1",
+  "description": "Warehouse Managment Server NodejS",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-AveyBD.git"
+  },
+  "author": "Debashish D. Dev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-AveyBD/issues"
+  },
+  "homepage": "https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-AveyBD#readme"
+}
