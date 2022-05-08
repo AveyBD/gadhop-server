@@ -30,6 +30,15 @@ async function run() {
       res.send(product);
     });
 
+     // get my product api
+     app.get("/my", async (req, res) => {
+      const userid = req.query.uid;
+      const query = {userid};
+      const cursor = productCollection.find(query);
+      const product = await cursor.toArray();
+      res.send(product);
+    });
+
     // add single product
     app.post("/product", async (req, res) => {
       const newProduct = req.body;
