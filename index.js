@@ -68,7 +68,7 @@ async function run() {
           price: updatedUser.price,
           quantity: updatedUser.quantity,
           description: updatedUser.description,
-          imgURL: updatedUser.imgURL
+          imgURL: updatedUser.imgURL,
         },
       };
       const result = await productCollection.updateOne(
