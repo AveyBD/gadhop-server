@@ -54,6 +54,24 @@ async function run() {
       res.send(sProduct);
     });
 
+    // Update Product
+
+    app.put("/view/:id", async (req, res) => {
+      const id = req.params.id;
+      const updatedUser = req.body;
+      const filter = { _id: ObjectId(id) };
+      const options = { upsert: true };
+      const updatedDOC = {
+        $set: { updatedUser },
+      };
+      const result = await productCollection.updateOne(
+        filter,
+        updatedDOC,
+        options
+      );
+      res.send(result);
+    });
+
     // delete api
     app.delete("/view/:id", async (req, res) => {
       const id = req.params.id;
