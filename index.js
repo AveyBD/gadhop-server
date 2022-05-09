@@ -64,6 +64,11 @@ async function run() {
       const updatedDoc = {
         $set: {
           name: updatedUser.name,
+          supplier: updatedUser.supplier,
+          price: updatedUser.price,
+          quantity: updatedUser.quantity,
+          description: updatedUser.description,
+          imgURL: updatedUser.imgURL
         },
       };
       const result = await productCollection.updateOne(
