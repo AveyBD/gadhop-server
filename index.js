@@ -61,12 +61,14 @@ async function run() {
       const updatedUser = req.body;
       const filter = { _id: ObjectId(id) };
       const options = { upsert: true };
-      const updatedDOC = {
-        $set: { updatedUser },
+      const updatedDoc = {
+        $set: {
+          name: updatedUser.name,
+        },
       };
       const result = await productCollection.updateOne(
         filter,
-        updatedDOC,
+        updatedDoc,
         options
       );
       res.send(result);
