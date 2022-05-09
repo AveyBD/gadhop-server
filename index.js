@@ -79,6 +79,24 @@ async function run() {
       res.send(result);
     });
 
+    app.put("/sview/:id", async (req, res) => {
+      const id = req.params.id;
+      const updatedUser = req.body;
+      const filter = { _id: ObjectId(id) };
+      const options = { upsert: true };
+      const updatedDoc = {
+        $set: {
+          quantity: updatedUser.quantity,
+        },
+      };
+      const result = await productCollection.updateOne(
+        filter,
+        updatedDoc,
+        options
+      );
+      res.send(result);
+    });
+
     // delete api
     app.delete("/view/:id", async (req, res) => {
       const id = req.params.id;
